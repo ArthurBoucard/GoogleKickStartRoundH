@@ -18,6 +18,6 @@ Kick Start is a global online coding competition, consisting of three-hour round
 
 ---
 
-### :globe_with_meridian: Link to results and problems :
+### :globe_with_meridians: Link to results and problems :
 
 https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff49
