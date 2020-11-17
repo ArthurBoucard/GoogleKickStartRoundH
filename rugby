@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+##
+## GOOGLE KICK START, 2020
+## ROUND H
+#!
+
+j = int(input())
+p = int(input())
+
+for i in range(1, j + 1):
+    tabx = []
+    taby = []
+    for i in range(0, p):
+        val, val2= map(int, input().split(" "))
+        tabx.append(val)
+        taby.append(val2)
+    end = 0
+
+    moy = 0
+    for m in range(0, len(tabx)):
+        moy += tabx[m]
+    moy /= len(tabx)
+    nb_moy_x = min(tabx, key=lambda x:abs(x - int(moy)))
+    moy = 0
+    for m in range(0, len(taby)):
+        moy += taby[m]
+    moy /= len(taby)
+    nb_moy_y = min(taby, key=lambda x:abs(x - int(moy)))
+
+    for n in range(0, p):
+        if(tabx[n] != nb_moy_x):
+            end += tabx[n] - nb_moy_x - 1
+        if(tabx[n] == nb_moy_x):
+            end += 1
+        if(taby[n] != nb_moy_y):
+            end += taby[n] - nb_moy_y
+        
+    
+    print("case #" + "%.0f" % i + ":", end)
+    
